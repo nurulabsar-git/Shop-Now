@@ -7,8 +7,9 @@ import  Grid  from '@material-ui/core/Grid';
 import  AddShoppingCart  from '@material-ui/icons/AddShoppingCart';
 import  Badge  from '@material-ui/core/Badge';
 import Item from './Item/Item';
+import { Wrapper } from './Item/Item.styles';
 // styles
-import {Wrapper} from './App.styles';
+
  
 // Data Types 
 export type CartItemType = {
@@ -47,11 +48,11 @@ function App() {
        {data?.map(item => (
         <Grid item key={item.id} xs={12} sm={4}>
         <Item item={item} handleAddToCart={handleAddToCart} />
-      </Grid>
-
+       </Grid>
        ))}
       </Grid>
-    </Wrapper>
+      </Wrapper>
+    
   );
 }
 
